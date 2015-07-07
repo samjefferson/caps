@@ -5,9 +5,6 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
-  def quiz
-  end
-
   def leaderboard
   end
 end

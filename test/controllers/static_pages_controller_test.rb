@@ -13,15 +13,17 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select "title", "Contact | The Capital Cities Quiz"
   end
 
-  test "should get quiz" do
-    get :quiz
-    assert_response :success
-    assert_select "title", "The Capital Cities Quiz"
-  end
-
   test "should get leaderboard" do
     get :leaderboard
     assert_response :success
     assert_select "title", "Leaderboard | The Capital Cities Quiz"
   end
+
+
+  test "should get quiz" do
+    get :quiz
+    assert_response :success
+    assert_select "title", "The Capital Cities Quiz"
+  end
+  
 end
