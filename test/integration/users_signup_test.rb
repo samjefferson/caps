@@ -18,6 +18,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
   								 password_confimation: "johnsnow"}
   	end
   	assert_template "users/leaderboard"
+    assert is_logged_in?
   end
 
 end
