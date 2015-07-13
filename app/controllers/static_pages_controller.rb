@@ -7,4 +7,10 @@ class StaticPagesController < ApplicationController
 
   def leaderboard
   end
+
+  def logcheck
+  	if logged_in?
+  		redirect_to quiz_path
+  	end
+  end
 end

@@ -492,10 +492,7 @@ function clickButFour(){
 function endQuiz(){
 	scoreCounter();
 	document.getElementById("endMes").innerHTML = ("Congratulations you have completed the quiz, your score is "+scoreTotal+".");
-	if(scoreTotal>16000){
-		document.getElementById("linkCont").href = ("bonus_launcher.html");
-		document.getElementById("scorePassOne").action = ("bonus_launcher.html");
-	}
+	
 
 	document.getElementById("scorePassTwo").value = (scoreTotal);
 }

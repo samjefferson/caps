@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
   	if user && user.authenticate(params[:session][:password])
   		log_in user
-  		redirect_to leaderboard_url
+  		redirect_to root_url
   	else
   	flash.now[:danger] = 'Invalid username/password combination' #not quite finished yet
   	render 'new'

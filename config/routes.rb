@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  
+
   get "signup" => 'users#new'
   get "contact" => 'static_pages#contact'
   get "quiz" =>  'static_pages#quiz'
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
   get "login" => 'sessions#new'
   post "login" => 'sessions#create'
   delete "logout" => 'sessions#destroy'
+  get "logcheck" => "static_pages#logcheck"
   root 'static_pages#home'
 
   resources :users
