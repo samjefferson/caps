@@ -501,19 +501,9 @@ function endQuiz(){
 
 function beginQuiz(){
 	document.getElementById("intro").style.display = "none";
-	document.getElementById("quiz-title").innerHTML = ("The Capital Cities Quiz");
-	//load image of 3
-
-	setTimeout(function(){
-		//load image of 2
-	}, 1000);
-	setTimeout(function(){
-		//load image of 1
-	}, 1000);
-	setTimeout(function(){
+	document.getElementById("quiz-title").innerHTML = ("The Capital Cities Quiz");	
 		loadGame();
 		document.getElementById("quiz").style.display = "block";
-	}, 1000);
 }
 
 

@@ -22,6 +22,10 @@ class ScoresController < ApplicationController
 		end
 	end
 
+	def index
+		@score = Score.all 
+	end
+
 	private
 
 	def score_params

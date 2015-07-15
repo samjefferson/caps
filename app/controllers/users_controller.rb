@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update_attributes(user_params)
-      raise 'aidsss'
+
     else
     end
   end
@@ -35,3 +35,4 @@ class UsersController < ApplicationController
   								 :password_confirmation)
   end
 end
+

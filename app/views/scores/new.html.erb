@@ -4,15 +4,21 @@
 			<br>
 			Good Luck.<p>
 
-			<input type="button" id="loadButton" value="Begin the quiz" onclick="beginQuiz()">
+			<%= button_tag "Begin quiz", class: 'btn btn-default', id: 'home-btn', onclick: "beginQuiz()" %>
 		</div>
 
-		<div id="quiz-box">
+		<div class="row">
+			<div id="quiz-box">
 			<div id="quiz">
-				<p class="quizlines"><span id="result"></span></p>
-				<p class="quizlines">Which of these is the capital city of <span id="capital"></span>?</p>
+			<div class="col-xs-4">
+				<h2 class="quizlines">Level:<br><span id="level"></span></p>
+					<h2 class="quizlines"><span id="result"></span></h2>
+			</div>
+
+		<div class="col-xs-4">
+				<h3 class="quizlines">Which of these is the capital city of <span id="capital"></span>?</h3>
 				<p class="quizlines">Question Score:<span id="potential"></span></p>
-				<p class="quizlines">Level:<span id="level"></span></p>
+				
 				
 				<input class="buttonNorm" type="button" id="buttonOne" value="" onclick="clickButOne()">
 				<input class="buttonNorm" type="button" id="buttonTwo" value="" onclick="clickButTwo()">
@@ -21,19 +27,23 @@
 		
 			<p class="quizlines">Attempts:<span id= "attempts"></span></p>
 			<p class="quizlines">Correct:<span id= "correct"></span></p>
-			<p class="quizlines">Current Score:<span id="score"></span></p>
-			<p id="endMes"><span id="endMessage"></span></p>
+			<h3 id="endMes"><span id="endMessage"></span></h3>
 			<div id="endForm">
 				<% if logged_in? %>
 					<%= form_for(@score) do |f| %>
 						<%= f.hidden_field :username, value: current_user.username %>
 						<%= f.hidden_field :scoreamount, id: 'finalScore', value: '0' %>
-						<%= f.submit 'Continue', class: 'button' %>	
+						<%= f.submit 'Continue', class: 'btn btn-default', id: 'home-btn' %>	
 					<% end %>
 					<% else %>
-						<%= link_to 'Continue', root_path, class: 'button' %>
+						<%= link_to 'Continue', root_path, class: 'btn btn-default', id: 'home-btn' %>
 					<% end %>"
 				</div>
 		</div>
+
+	<div class="col-xs-4">
+		<h2 class="quizlines" id="current-score">Score:<br><span id="score"></span></h2>
 	</div>
+	</div>
+</div>
 

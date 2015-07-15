@@ -1,4 +1,5 @@
-<table>
+<h1>Leaderboard</h1>
+<table class="table table-hover">
 	<tr>
 		<th>Rank</th>
 		<th>Username</th>
@@ -10,7 +11,7 @@
 	<% if logged_in? %>
 	<% currentscore = Score.find_by(username: current_user.username) %>
 	<% if !currentscore.nil? %>
-	<tr>
+	<tr id='personal-best'>
 		<td><%= sorted.index(currentscore) + 1 %></td>
 		<td><%= currentscore.username %></td>
 		<td><%= currentscore.scoreamount %></td>

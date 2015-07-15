@@ -9,6 +9,15 @@
 
 }
 
+/* mixin */
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+
 /* variables */
 
 $basic-font: Arial;
@@ -107,13 +116,15 @@ h1#welcome{
 	text-align: center;
 }
 
-#homebtn{
+#home-btn{
 	display: block;
 	margin: auto;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	width: 200px;
 	background-color: $blue-one;
 	color: white;
+
 }
 
 #advert-header{
@@ -140,4 +151,70 @@ h1#welcome{
 	margin: 10px;
 	border: 1px solid white;
 	border-radius: 10px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+#reg-btn{
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 200px;
+	background-color: $blue-one;
+	color: white;
+}
+
+#log-btn{
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 200px;
+	background-color: $blue-one;
+	color: white;
+}
+
+input {
+  height: auto !important;
+}
+
+.buttonNorm{
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 200px;
+	background-color: $blue-one;
+	color: white;
+	border-radius: 3px;
+}
+
+#level{
+	font-weight: bold;
+	color: $blue-one
+}
+
+#currentscore{
+	text-align: center;
+}
+
+#score{
+	font-weight: bold;
+	color: $blue-one;
+}
+
+#personal-best{
+	color: white;
+	background-color: $blue-one;
+	&:hover{
+	color: black;
+	}
 }
