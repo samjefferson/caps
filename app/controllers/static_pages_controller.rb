@@ -13,4 +13,9 @@ class StaticPagesController < ApplicationController
   		redirect_to quiz_path
   	end
   end
+
+  def quiz
+  	@user = current_user
+  end
+  
 end

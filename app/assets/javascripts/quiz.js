@@ -185,7 +185,7 @@ var capitals =
 ["Uzbekistan", "Tashkent", 5],
 ["Vanuatu", "Port-Vila", 5],
 ["Vatican City", "Vatican City", 2],
-["Veitnam", "Hanoi", 3],
+["Vietnam", "Hanoi", 3],
 ["Yemen", "Sanaa", 4],
 ["Zambia", "Lusaka", 5],
 ["Zimbabwe", "Harare", 3]
@@ -492,7 +492,9 @@ function clickButFour(){
 function endQuiz(){
 	scoreCounter();
 	document.getElementById("endMes").innerHTML = ("Congratulations you have completed the quiz, your score is "+scoreTotal+".");
-	
+	document.getElementById('endForm').style.display = "inline";
+
+	$('#finalScore').val(scoreTotal);
 
 	document.getElementById("scorePassTwo").value = (scoreTotal);
 }

@@ -1,0 +1,23 @@
+<table>
+	<tr>
+		<th>Rank</th>
+		<th>Username</th>
+		<th>Score</th>
+	</tr>
+	<% @score = Score.all %>
+	<% rank = 1 %>
+	<% sorted = @score.sort_by{|u| u.scoreamount}.reverse %>
+	<tr>
+		<% currentscore = Score.find_by(username: current_user.username) %>
+		<td><%= sorted.index(currentscore) + 1 %></td>
+		<td><%= currentscore.username %></td>
+		<td><%= currentscore.scoreamount %></td>
+	</tr>
+	<% sorted.first(20).each do |k| %>
+		<tr>
+			<td><%= sorted.index(k) + 1 %></td>
+			<td> <%= k.username %> </td>
+			<td> <%= k.scoreamount %> </td>
+		</tr>
+		<% end %>
+	</table>

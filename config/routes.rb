@@ -4,15 +4,19 @@ Rails.application.routes.draw do
 
   get "signup" => 'users#new'
   get "contact" => 'static_pages#contact'
-  get "quiz" =>  'static_pages#quiz'
-  get "leaderboard" => 'users#leaderboard'
+  get "quiz" =>  'scores#new'
+  post "quiz" => 'scores#create'
+  get "leaderboard" => 'scores#index'
   get "login" => 'sessions#new'
   post "login" => 'sessions#create'
   delete "logout" => 'sessions#destroy'
   get "logcheck" => "static_pages#logcheck"
+  get 'edit' => "users#edit"
+  post "edit" => "users#update"
   root 'static_pages#home'
 
   resources :users
+  resources :scores
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

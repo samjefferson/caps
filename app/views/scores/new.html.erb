@@ -1,4 +1,4 @@
-		<h1 id="quiz-title">Before you begin...</h1>
+<h1 id="quiz-title">Before you begin...</h1>
 		<div id="intro">
 			<p>This quiz is designed to test your ability to match a country with the correct capital city.  Each question will provide you a with the name of a country and four capital city options, three incorrect and one correct.  You must attempt to pick the correct option as quickly as possible.  Your score for each question is based firstly on whether or not you answer correctly and secodly on the speed with which you answer.  As you answer questions correctly you will progress through levels which have increasing difficulty.<br>
 			<br>
@@ -23,7 +23,17 @@
 			<p class="quizlines">Correct:<span id= "correct"></span></p>
 			<p class="quizlines">Current Score:<span id="score"></span></p>
 			<p id="endMes"><span id="endMessage"></span></p>
+			<div id="endForm">
+				<% if logged_in? %>
+					<%= form_for(@score) do |f| %>
+						<%= f.hidden_field :username, value: current_user.username %>
+						<%= f.hidden_field :scoreamount, id: 'finalScore', value: '0' %>
+						<%= f.submit 'Continue', class: 'button' %>	
+					<% end %>
+					<% else %>
+						<%= link_to 'Continue', root_path, class: 'button' %>
+					<% end %>"
+				</div>
 		</div>
 	</div>
-
 
