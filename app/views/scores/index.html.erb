@@ -7,12 +7,16 @@
 	<% @score = Score.all %>
 	<% rank = 1 %>
 	<% sorted = @score.sort_by{|u| u.scoreamount}.reverse %>
+	<% if logged_in? %>
+	<% currentscore = Score.find_by(username: current_user.username) %>
+	<% if !currentscore.nil? %>
 	<tr>
-		<% currentscore = Score.find_by(username: current_user.username) %>
 		<td><%= sorted.index(currentscore) + 1 %></td>
 		<td><%= currentscore.username %></td>
 		<td><%= currentscore.scoreamount %></td>
 	</tr>
+	<% end %>
+	<% end %>
 	<% sorted.first(20).each do |k| %>
 		<tr>
 			<td><%= sorted.index(k) + 1 %></td>

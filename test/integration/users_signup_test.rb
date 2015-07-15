@@ -17,7 +17,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
   		post_via_redirect users_path, user: {username: "JohnSnow", password: "johnsnow",
   								 password_confimation: "johnsnow"}
   	end
-  	assert_template "users/leaderboard"
+  	assert_template "scores/index"
     assert is_logged_in?
   end
 
