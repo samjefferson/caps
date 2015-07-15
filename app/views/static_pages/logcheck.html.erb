@@ -1,5 +1,6 @@
 <div>
-		<p>You are not logged in.  If you wish to save your score to the leader <%= link_to "Log In", login_path %>.  If you are not registered, <%= link_to "Sign up here", signup_path %>.  If you do not wish to save your scores please continue.</p>
+	<h1>Before you begin...</h1>
+		<p>You are not logged in.  If you wish to save your score to the leaderboard then please <%= link_to "Log In", login_path %>.<br>  If you are not registered, <%= link_to "Sign up here", signup_path %>.<br>  If you do not wish to save your scores please continue.</p>
 
 		<%= link_to "Continue", quiz_path, id: 'button' %>
 

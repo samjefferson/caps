@@ -1,9 +1,143 @@
 /* misc */
 
+
 .debug_dump {
 
 	width: 100%;
 	border: 1px solid black;
 	margin-top: 45px;
 
+}
+
+/* variables */
+
+$basic-font: Arial;
+$blue-one: #005858;
+/* site wide */
+
+body{
+	padding-top: 50px;
+}
+
+/* header */
+
+.navbar-nav {
+	color: $blue-one;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+/* logo */
+
+#logo { 
+float: left;
+margin-top: 10px;
+font-size: 25px;
+font-weight: bold;
+color: $blue-one;
+text-transform: uppercase;
+letter-spacing: -1px;
+	&:hover {
+	text-decoration: none;
+	color: $blue-one;
+	}
+}
+
+/* application */
+
+body{
+	height: 100%;
+}
+
+
+#background{
+	background-color: #CCFFFF;
+	border: 1px solid black;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.btn-default{
+	margin: 20px;
+}
+
+
+
+/* homepage */
+
+h1#welcome{
+	font-size: 60px;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	text-align: center;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+
+#homepara{
+	text-align: center;
+}
+
+#homebtn{
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	width: 200px;
+	background-color: $blue-one;
+	color: white;
+}
+
+#advert-header{
+	text-align: center;
+	letter-spacing: -1px;
+}
+
+#half-p{
+	position: relative;
+	margin: 10 px;
+	width: 100%;
+}
+
+#abstract-group{
+	display: block;
+	width: 35%;
+	float: left;
+	margin: 10px;
+}
+
+.home-image{
+	display: block;
+	width: 100%;
+	margin: 10px;
+	border: 1px solid white;
+	border-radius: 10px;
 }

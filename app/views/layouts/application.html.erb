@@ -5,14 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body <%= yield(:load) %>>
 <%= render 'layouts/header' %> 
+<div class='container' id='background'>
 <% flash.each do |message_type, message| %>
 	<div class="alert alert-<%= message_type %>"><%= message %> </div>
 <% end %>
 <%= yield %>
+</div>
 <%= render 'layouts/footer' %>
 <%= debug(params) if Rails.env.development? %>
 </body>

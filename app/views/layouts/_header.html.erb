@@ -1,15 +1,17 @@
-<header id="topbar">
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class='container'>
 	<%= link_to "The Capital Cities Quiz", root_path, id: "logo" %>
 	<nav>
-		<ul class="navbar">
-			<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "Leaderboard", leaderboard_path %></li>
+		<ul class="nav navbar-nav navbar-right">
+			<li><%= link_to "Home", root_path, class: 'navlink' %></li>
+			<li><%= link_to "Leaderboard", leaderboard_path, class: 'navlink' %></li>
 			<% if logged_in? %>
-				<li><%= link_to "Log Out", logout_path, method: "delete" %></li>
+				<li><%= link_to "Log Out", logout_path, method: "delete", class: 'navlink' %></li>
 			<% else %>
-				<li><%= link_to "Log In", login_path %></li>
-				<li><%= link_to "Register", signup_path %></li>
+				<li><%= link_to "Log In", login_path, class: 'navlink' %></li>
+				<li><%= link_to "Register", signup_path, class: 'navlink' %></li>
 			<% end %>
 		</ul>
 	</nav>
+</div>
 </header>
