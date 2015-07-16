@@ -99,6 +99,31 @@ body{
 	margin: 20px;
 }
 
+.advert-header{
+	text-align: center;
+	letter-spacing: -1px;
+}
+
+.half-p{
+	position: relative;
+	padding: 10 px;
+	width: 100%;
+}
+
+#group{
+	display: block;
+	width: 35%;
+	float: left;
+	margin: 10px;
+}
+
+#time{
+	display: block;
+	width: 35%;
+	float: right;
+	margin: 10px;
+}
+
 
 
 /* homepage */
@@ -127,23 +152,6 @@ h1#welcome{
 
 }
 
-#advert-header{
-	text-align: center;
-	letter-spacing: -1px;
-}
-
-#half-p{
-	position: relative;
-	margin: 10 px;
-	width: 100%;
-}
-
-#abstract-group{
-	display: block;
-	width: 35%;
-	float: left;
-	margin: 10px;
-}
 
 .home-image{
 	display: block;

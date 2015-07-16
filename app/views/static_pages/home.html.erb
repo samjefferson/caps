@@ -4,27 +4,3 @@
 <p class='homepara'>Welcome to The Capital Cities Quiz.  This quiz will test your ability to identify the correct capital city, whether by knowledge or deduction.  Skilled players will find that this quiz quickly becomes difficult as they progress through the levels.  Every recognised state is represented in the quiz database, meaning any state in the world could be posed to you as a question.  If you're ready, feel free to begin.  More detailed instructions will be given before the start of the quiz.
 <%= link_to "Start the quiz", logcheck_path, class: "btn btn-default", id: 'home-btn' %>
 
-<div class='container'>
-	<div class='row'>
-		<div class='col-xs-4'>
-			<h3>Coming soon:</h3>
-			<h4 id='advert-header'>THE CAPITAL CITIES QUIZ - POPULATIONS</h4>
-			<%= image_tag('abstract-group.png', id: 'abstract-group') %>
-			<p id='half-p'>Can you match a city with its population from four options by deduction.  A test of geographical knowledge and logic.<p> 
-			<span class="glyphicons glyphicons-group"></span>
-		</div>
-		<div class='col-xs-4'>
-			<% rand_number = rand(3) %>
-			<% if rand_number == 0 %>
-			<%= image_tag('paris.jpg', class: 'home-image') %>
-			<% elsif rand_number == 1 %>
-			<%= image_tag('people.jpg', class: 'home-image') %>
-			<% else %>
-			<%= image_tag('tokyo.jpg', class: 'home-image' )%>
-			<% end %>
-		</div>
-		<div class='col-xs-4'>
-			<h3>Coming soon:</h3>
-		</div>
-	</div>
-</div>

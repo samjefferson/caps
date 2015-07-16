@@ -5,6 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <% if current_page?(root_url) %>
+  <meta name="description" content="The ultimate capital cities quiz, accessible for beginners while challenging for skilled players.  Can you match each country with its capital city?">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<% end %>
+
 </head>
 <body <%= yield(:load) %>>
 <%= render 'layouts/header' %> 
@@ -13,7 +18,36 @@
 	<div class="alert alert-<%= message_type %>"><%= message %> </div>
 <% end %>
 <%= yield %>
+<% if !current_page?(quiz_path) %>
+<div class='container'>
+	<div class='row'>
+		<div class='col-xs-4'>
+			<h3>Coming soon:</h3>
+			<h4 class='advert-header'>THE CAPITAL CITIES QUIZ - POPULATIONS</h4>
+			<%= image_tag('group.jpg', id: 'group') %>
+			<p class='half-p'>Can you match a city with its population from four options by deduction.  A test of geographical knowledge and logic.<p> 
+			<span class="glyphicons glyphicons-group"></span>
+		</div>
+		<div class='col-xs-4'>
+			<% rand_number = rand(3) %>
+			<% if rand_number == 0 %>
+			<%= image_tag('paris.jpg', class: 'home-image') %>
+			<% elsif rand_number == 1 %>
+			<%= image_tag('people.jpg', class: 'home-image') %>
+			<% else %>
+			<%= image_tag('tokyo.jpg', class: 'home-image' )%>
+			<% end %>
+		</div>
+		<div class='col-xs-4'>
+			<h3>Coming soon:</h3>
+			<h4 class="advert-header">THE CAPITAL CITIES QUIZ - TIMEZONES</h4>
+			<%= image_tag('time.jpg', id: 'time') %>
+			<p class="half-p">Can you work out which timezone each of these capital cities are in? do you even know which continent they are on?  A test of logical deduction. <p>
+		</div>
+	</div>
 </div>
+</div>
+<% end %>
 <%= render 'layouts/footer' %>
 <%= debug(params) if Rails.env.development? %>
 </body>
