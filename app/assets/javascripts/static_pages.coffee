@@ -2,6 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+# Below is a rails/turbolinks friendly version of the facebook SDK
+
 $ ->
   loadFacebookSDK()
   bindFacebookEvents() unless window.fbEventsBound
@@ -28,7 +30,7 @@ restoreFacebookRoot = ->
 
 loadFacebookSDK = ->
   window.fbAsyncInit = initializeFacebookSDK
-  $.getScript("//connect.facebook.net/en_US/sdk.js")
+  $.getScript("//connect.facebook.net/en_US/all.js")
 
 initializeFacebookSDK = ->
   FB.init
