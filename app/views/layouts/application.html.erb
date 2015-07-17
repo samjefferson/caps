@@ -9,7 +9,6 @@
   <meta name="description" content="The ultimate capital cities quiz, accessible for beginners while challenging for skilled players.  Can you match each country with its capital city?">
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
 	<% end %>
-
 </head>
 <body <%= yield(:load) %>>
 <%= render 'layouts/header' %> 
@@ -18,6 +17,7 @@
 	<div class="alert alert-<%= message_type %>"><%= message %> </div>
 <% end %>
 <%= yield %>
+<%# below is the advert and pic containers at the bottom of each page %>
 <% if !current_page?(quiz_path) %>
 <div class='container'>
 	<div class='row'>
@@ -49,6 +49,7 @@
 </div>
 <% end %>
 <%= render 'layouts/footer' %>
+</div>
 <%= debug(params) if Rails.env.development? %>
 </body>
 </html>

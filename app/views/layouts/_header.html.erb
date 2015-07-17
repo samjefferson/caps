@@ -3,6 +3,7 @@
 	<%= link_to "The Capital Cities Quiz", root_path, id: "logo" %>
 	<nav>
 		<ul class="nav navbar-nav navbar-right">
+
 			<li><%= link_to "Home", root_path, class: 'navlink' %></li>
 			<li><%= link_to "Leaderboard", leaderboard_path, class: 'navlink' %></li>
 			<% if logged_in? %>
@@ -10,7 +11,9 @@
 			<% else %>
 				<li><%= link_to "Log In", login_path, class: 'navlink' %></li>
 				<li><%= link_to "Register", signup_path, class: 'navlink' %></li>
+
 			<% end %>
+			<li><div class="fb-share-button" data-href="https://www.thecapitalcitiesquiz.com/" data-layout="button"></div></li>
 		</ul>
 	</nav>
 </div>

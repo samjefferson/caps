@@ -3,4 +3,18 @@
 <h1>Welcome...</h1>
 <p class='homepara'>Welcome to The Capital Cities Quiz.  This quiz will test your ability to identify the correct capital city, whether by knowledge or deduction.  Skilled players will find that this quiz quickly becomes difficult as they progress through the levels.  Every recognised state is represented in the quiz database, meaning any state in the world could be posed to you as a question.  If you're ready, feel free to begin.  More detailed instructions will be given before the start of the quiz.
 <%= link_to "Start the quiz", logcheck_path, class: "btn btn-default", id: 'home-btn' %>
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
