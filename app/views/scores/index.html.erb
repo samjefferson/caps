@@ -5,22 +5,30 @@
 		<th>Username</th>
 		<th>Score</th>
 	</tr>
-	<% @score = Score.all %>
-	<% rank = 1 %>
+	<% indexaddition = 1 %>
+	<% @score = Score.where("scoreamount < 24335") %>
 	<% sorted = @score.sort_by{|u| u.scoreamount}.reverse %>
 	<% if logged_in? %>
-	<% currentscore = Score.find_by(username: current_user.username) %>
-	<% if !currentscore.nil? %>
-	<tr id='personal-best'>
-		<td><%= sorted.index(currentscore) + 1 %></td>
-		<td><%= currentscore.username %></td>
-		<td><%= currentscore.scoreamount %></td>
-	</tr>
-	<% end %>
+		<% currentscore = Score.find_by(username: current_user.username) %>
+		<% rank = sorted.index(currentscore) %>
+		<% if !rank.nil? %>
+		<tr class='personal-best'>
+			<td><%= rank + 1 %></td>
+			<td><%= currentscore.username %></td>
+			<td><%= currentscore.scoreamount %></td>
+		</tr>
+		<% else %>
+		<tr class='personal-best'>
+			<td><%= 1 %></td>
+			<td><%= currentscore.username %></td>
+			<td><%= currentscore.scoreamount %></td>
+		</tr>
+		<% indexaddition = 2 %>
+		<% end %>
 	<% end %>
 	<% sorted.first(20).each do |k| %>
 		<tr>
-			<td><%= sorted.index(k) + 1 %></td>
+			<td><%= sorted.index(k) + indexaddition %></td>
 			<td> <%= k.username %> </td>
 			<td> <%= k.scoreamount %> </td>
 		</tr>

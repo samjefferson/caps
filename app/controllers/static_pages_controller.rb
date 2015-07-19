@@ -9,13 +9,17 @@ class StaticPagesController < ApplicationController
   end
 
   def logcheck
+
+    url = request.original_url
+
+    if !url.include? "thecapitalcitiesquiz.com/"
+      redirect_to root_path
+    end
+
   	if logged_in?
   		redirect_to quiz_path
   	end
   end
 
-  def quiz
-  	@user = current_user
-  end
   
 end

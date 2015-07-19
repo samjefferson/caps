@@ -1,6 +1,10 @@
 class ScoresController < ApplicationController
 	
 	def new
+		url = request.original_url
+		if !url.include? "/logcheck"
+			redirect_to logcheck_path
+		end
 		@score = Score.new
 	end
 
