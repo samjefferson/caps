@@ -10,9 +10,7 @@ class StaticPagesController < ApplicationController
 
   def logcheck
 
-    url = request.referer
-
-    if !url.include? "thecapitalcitiesquiz.com/"
+    if !URI(request.referer).host == "thecapitalcitiesquiz.com" && !URI(request.referer).path == "/"
       redirect_to root_url
     end
 
