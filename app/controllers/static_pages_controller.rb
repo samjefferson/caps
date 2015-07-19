@@ -13,11 +13,11 @@ class StaticPagesController < ApplicationController
     url = request.referer
 
     if !url.include? "thecapitalcitiesquiz.com/"
-      redirect_to root_path
+      redirect_to root_url
     end
 
   	if logged_in?
-  		redirect_to quiz_path
+  		redirect_to quiz_url
   	end
   end
 
