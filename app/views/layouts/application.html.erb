@@ -18,7 +18,7 @@
 <% end %>
 <%= yield %>
 <%# below is the advert and pic containers at the bottom of each page %>
-<% if !current_page?(quiz_path) %>
+<% if !current_page?(quiz_path) && !current_page?(quiz_timezones_path) %>
 <div class='container'>
 	<div class='row'>
 		<div class='col-xs-4'>
