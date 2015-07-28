@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   
 
+  
+
   get "signup" => 'users#new'
   get "contact" => 'static_pages#contact'
   get "quiz" =>  'scores#new'
@@ -14,9 +16,15 @@ Rails.application.routes.draw do
   get 'edit' => "users#edit"
   post "edit" => "users#update"
   root 'static_pages#home'
+  get 'quiz_timezones' => "scores_tzs#new"
+  post 'quiz_timezones' => "scores_tzs#create"
+  get 'leaderboard_timezones' => "scores_tzs#index"
+  get 'logcheck_tz' => "static_pages#logcheck_tz"
+  get "leader_select" => "static_pages#leader_select"
 
   resources :users
   resources :scores
+  resources :scores_tzs
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -125,14 +125,33 @@ letter-spacing: -1px;
 
 /* homepage */
 
-h1#welcome{
-	font-size: 50px;
+.col-xs-6{
+	margin-bottom: 30px;
+}
+
+.homepage-title{
+	font-size: 25px;
 	text-transform: uppercase;
-	letter-spacing: -2px;
+	letter-spacing: -1px;
 	text-align: center;
 	margin-bottom: 30px;
 	font-weight: bold;
 	color: $blue-one;
+	margin-top: 50px;
+		&:hover{
+		color: black;
+		}
+}
+.hover-one:hover{
+		text-decoration: none ;
+}
+
+#redtitle{
+	color: #B22222; 
+}
+
+#reducedtitle{
+	font-size: 18px;
 }
 
 #homepara{

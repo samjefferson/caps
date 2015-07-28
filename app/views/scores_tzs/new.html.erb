@@ -1,0 +1,51 @@
+<h1 id="quiz-titleTz">Before you begin...</h1>
+		<div id="introTz">
+			<p>This quiz is designed to test your ability to match a UTC timezone with the correct capital city.  Each question will provide you a with a timezone and four capital city options, three incorrect and one correct.  You must attempt to pick the correct option as quickly as possible.  Your score for each question is based firstly on whether or not you answer correctly and secondly on the speed with which you answer.  As you answer questions correctly you will progress through levels which have increasing difficulty.	<br>  The timezones used are the official UTC timezones when DST is not currently being observed.
+			<br>
+			<br>
+			Good Luck.<p>
+
+			<%= button_tag "Begin quiz", class: 'btn btn-default', id: 'home-btn', onclick: "beginQuizTz()" %>
+		</div>
+
+		<div class="row">
+			<div id="quiz-boxTz">
+			<div id="quizTz">
+			<div class="col-xs-4">
+				<h2 class="quizlinesTz">Level:<br><span id="levelTz"></span></p>
+					<h2 class="quizlinesTz"><span id="resultTz"></span></h2>
+			</div>
+
+		<div class="col-xs-4">
+				<h3 class="quizlinesTz">Which of these capitals are at <span id="capitalTz"></span>?</h3>
+				<p class="quizlinesTz">Question Score:<span id="potentialTz"></span></p>
+				
+				
+				<input class="buttonNorm" type="button" id="buttonOneTz" value="" onclick="clickButOneTz()">
+				<input class="buttonNorm" type="button" id="buttonTwoTz" value="" onclick="clickButTwoTz()">
+				<input class="buttonNorm" type="button" id="buttonThreeTz" value="" onclick="clickButThreeTz()">
+				<input class="buttonNorm" type="button" id="buttonFourTz" value="" onclick="clickButFourTz()">
+		
+			<p class="quizlinesTz">Attempts:<span id= "attemptsTz"></span></p>
+			<p class="quizlinesTz">Correct:<span id= "correctTz"></span></p>
+			<h3 id="endMesTz"><span id="endMessageTz"></span></h3>
+			<div id="endFormTz">
+				<% if logged_in? %>
+					<%= form_for(@score) do |f| %>
+						<%= f.hidden_field :username, value: current_user.username %>
+						<%= f.hidden_field :scoreamount, id: 'finalScoreTz', value: '0' %>
+						<%= f.submit 'Continue', class: 'btn btn-default', id: 'home-btn' %>	
+					<% end %>
+					<% else %>
+						<%= link_to 'Continue', root_path, class: 'btn btn-default', id: 'home-btn' %>
+					<% end %>"
+				</div>
+		</div>
+
+	<div class="col-xs-4">
+		<h2 class="quizlines" id="current-scoreTz">Score:<br><span id="scoreTz"></span></h2>
+	</div>
+</div>
+</div>
+</div>
+</div>

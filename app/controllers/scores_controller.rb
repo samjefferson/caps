@@ -1,9 +1,7 @@
 class ScoresController < ApplicationController
 	
 	def new
-		if !URI(request.referer).path == "/logcheck"
-			redirect_to logcheck_url
-		end
+	
 		@score = Score.new
 	end
 

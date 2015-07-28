@@ -174,7 +174,7 @@ var capitals =
 ["Syria", "Damascus", 3],
 ["Taiwan", "Taipei", 4],
 ["Tajikistan", "Dunshanbe", 5],
-["Tanzania", "Dar es Salaam", 4],
+["Tanzania", "Dodoma", 4],
 ["Togo", "Lome", 5],
 ["Tonga", "Nuku'alofa", 5],
 ["Trinidad and Tobago", "Port-of-Spain", 4],
@@ -494,7 +494,7 @@ function endQuiz(){
 	document.getElementById("endMes").innerHTML = ("Congratulations you have completed the quiz, your score is "+scoreTotal+".");
 	document.getElementById('endForm').style.display = "inline";
 
-	$('#finalScore').val(24990);
+	$('#finalScore').val(scoreTotal);
 
 	document.getElementById("scorePassTwo").value = (scoreTotal);
 }

@@ -1,8 +1,28 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6">
+			<%= link_to logcheck_path, class: 'hover-one' do %>
+			<div>
+			<h1 class='homepage-title'>The capital cities quiz</h1>
+		</div>
+		<%end%>
+		</div>
+		<div class="col-xs-6">
+			<%= link_to logcheck_tz_path, class: 'hover-one' do %>
+			<div>
+			<h1 class='homepage-title'><span id="reducedtitle">The capital cities quiz</span><br><span id="redtitle">Timezones</span></h1>
+		</div>
+		<%end%>
+		</div>
+	</div>
+</div>
 
-<h1 id='welcome'>The capital cities quiz</h1>
-<h1>Welcome...</h1>
-<p class='homepara'>Welcome to The Capital Cities Quiz.  This quiz will test your ability to identify the correct capital city, whether by knowledge or deduction.  Skilled players will find that this quiz quickly becomes difficult as they progress through the levels.  Every recognised state is represented in the quiz database, meaning any state in the world could be posed to you as a question.  If you're ready, feel free to begin.  More detailed instructions will be given before the start of the quiz.
-	
+<h1>Welcome</h1>
+<p class='homepara'><b>Welcome to The Capital Cities Quiz.</b>  This quiz will test your ability to identify the correct capital city, whether by knowledge or deduction.  Skilled players will find that this quiz quickly becomes difficult as they progress through the levels.  Every recognised state is represented in the quiz database, meaning any state in the world could be posed to you as a question.  If you're ready, feel free to begin.  More detailed instructions will be given before the start of the quiz.</p>
+<br>
+<br>
+<p class='homepara'><b>What time is it... in Vanuatu?</b> Why not try our more testing timezones quiz?  Can you match capital cities with their UTC offset amount.  A true geographical and deductional test, not for the faint hearted.  Use deduction to try and isolate the correct answer as quickly as possible.</p>
+
 <%= link_to "Start the quiz", logcheck_path, class: "btn btn-default", id: 'home-btn' %>
 <small>Next Update: 29/07/2015</small>
 
