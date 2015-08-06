@@ -138,13 +138,15 @@ letter-spacing: -1px;
 	font-weight: bold;
 	color: $blue-one;
 	margin-top: 50px;
-		&:hover{
-		color: black;
-		}
+}
+
+.homepage-title:not(.no-hover):hover{
+	color: black;
 }
 .hover-one:hover{
 		text-decoration: none ;
 }
+
 
 #redtitle{
 	color: #B22222; 

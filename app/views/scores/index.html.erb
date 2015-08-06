@@ -18,12 +18,14 @@
 			<td><%= currentscore.scoreamount %></td>
 		</tr>
 		<% else %>
+		<% if !currentscore.nil? %>
 		<tr class='personal-best'>
 			<td><%= 1 %></td>
 			<td><%= currentscore.username %></td>
 			<td><%= currentscore.scoreamount %></td>
 		</tr>
 		<% indexaddition = 2 %>
+		<% end %>
 		<% end %>
 	<% end %>
 	<% sorted.first(20).each do |k| %>
